@@ -10,6 +10,12 @@ import {
 } from "../controllers/roomControllers.js";
 import { catchErrors } from "../helpers.js";
 
+// Path avec ES Module
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -20,14 +26,14 @@ router.get("/test", getTest);
 
 router.post("/test", postTest);
 
-router.post("/room", catchErrors(addRoom));
+router.post("/rooms", catchErrors(addRoom));
 
-router.get("/room/:id", catchErrors(getRoom));
+router.get("/rooms/:id", catchErrors(getRoom));
 
-router.patch("/room/:id", catchErrors(updateRoom));
+router.patch("/rooms/:id", catchErrors(updateRoom));
 
 router.get("/rooms", catchErrors(getRooms));
 
-router.delete("/room/:id", catchErrors(deleteRoom));
+router.delete("/rooms/:id", catchErrors(deleteRoom));
 
 export default router;

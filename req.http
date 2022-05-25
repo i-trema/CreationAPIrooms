@@ -1,0 +1,23 @@
+GET http://localhost:3001/rooms
+
+###
+
+POST http://localhost:3001/rooms HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Basic"
+}
+
+###
+
+GET http://localhost:3001/rooms/5fa025e6a1da8a6194838d5f
+
+###
+
+PATCH http://localhost:3001/rooms/5fa025e6a1da8a6194838d5f HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Basique"
+}
