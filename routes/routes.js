@@ -13,7 +13,7 @@ import { catchErrors } from "../helpers.js";
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.send("Hello ça marche !! <br> <a href='/rooms'></a>");
+  res.send("Hello ça marche !! <br> <a href='/rooms'>Rooms</a>");
 });
 
 router.get("/test", getTest);
