@@ -18,6 +18,10 @@ const RoomSchema = new mongoose.Schema({
       }
     },
   },
+  promo: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 ///////------création d'un model "Room" en utilisant le Schema "RoomSchema" :
